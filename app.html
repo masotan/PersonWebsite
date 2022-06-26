@@ -2,7 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="stylesheet.css"/>
-<title>My Little Corner</title>
+<title>dan's smol corner</title>
 </head>
 
 <body>
@@ -113,49 +113,37 @@
 
 </div>
 
-
 <div class="main">
-<div class="intro">
-<h1>Hey there how is it going?</h1>
-<br>
-<h1>Welcome to Daniel's Little Corner</h1>
-<br>
-<span></span>
-<p>There isn't much to see honestly but you can take a look around</p>
-<br>
-<button id="pictures">Show me some pictures</button>
-<script>
-document.getElementById("pictures").addEventListener('click', function(){
-    var nav = document.getElementById("nav2");
-    nav.play();
-    document.querySelector(".photo").style.display = 'block';
-    document.querySelector(".intro").style.display = 'none';
-});
-</script>
-</div>
+    <div class="intro">
+        <!--Give a description of who you are and what you do and the things you do. Art, Language Learning. Game Dev, 3d modeling.
+        -->
+        <h1></h1>
+        <br>
+        <h1>danos smol corner</h1>
+        <br>
+        <span></span>
+        <p>There isn't much to see honestly but you can take a look around</p>
+        <br>
+        <button id="pictures">Show me some pictures</button>
+        
+        <img src="picture.png" id="shonan">
+
+
+    </div>
 
 <div class="photo">
-<img id="lucario" width=500px src="https://pics.onsizzle.com/send-your-cutest-delivery-boy-67858740.png">
-<p>Delivery doggo</p>
-<p class="tip">*click the image to exit*</p>
-</div>
-<script>
-        document.querySelector("#lucario").addEventListener('click', function(){
-        document.querySelector("#nav3").play();
-        document.querySelector(".photo").style.display = 'none';
-        document.querySelector(".intro").style.display = 'block';
-        })
-
-</script>
+    <img id="lucario" width=500px src="https://pics.onsizzle.com/send-your-cutest-delivery-boy-67858740.png">
+    <p>Delivery doggo</p>
+    <p class="tip">*click the image to exit*</p>
 </div>
 
+</div>
 
-
-
-<audio controls volume="0.1" id="music" width="0px" height="0px">
+<audio controls="controls" volume=0.1 id="music" width="0px" height="0px">
         <source src="audio.mp3" type="audio/mp3" />
       Your browser does not support the audio tag.
 </audio>
+
 
 <audio controls="controls" id="nav" width="0px" height="0px">
     <source src="playstation4nav.mp3" type="audio/mp3" />
@@ -173,50 +161,10 @@ document.getElementById("pictures").addEventListener('click', function(){
 </audio>
 
 
-<script>
 
 
-document.querySelector(".banner__close").addEventListener('click', function(){
-    document.querySelector("#nav").play();
-    this.closest(".banner").style.display = 'none';
-    document.querySelector(".load__screen").style.display = 'block';
-    document.querySelector("body").style.animation = "fadeIn 5s";
-    document.querySelector("body").style.backgroundColor = "black";
-
-    
-    
-    setTimeout(function(){
-        var audio = document.getElementById("music");
-    audio.play();
-    console.log("Audio is playing");
-        document.querySelector(".load__screen").style.display = 'none';
-        document.querySelector("body").style.backgroundColor = "beige";
-        document.querySelector("body").style.animation = "fadeIn 5s";
-        document.querySelector(".main").style.display = 'block';
-    }, 3000 )
-
-});
-
-window.addEventListener('load', function() {
-    console.log("All assets have loaded");
-    document.querySelector("#music").style.display = 'none';
-    document.querySelector("#nav").style.display = 'none';
-    document.querySelector("#nav2").style.display = 'none';
-    document.querySelector("#nav3").style.display = 'none';
-    document.querySelector("body").style.backgroundColor = "orange";
-    document.querySelector(".main").style.display = 'none';
-    document.querySelector(".load__screen").style.display = 'none';
-});
-
-window.addEventListener('click', function() {
-    console.log("You have clicked the page");
-});
-
-
-
-</script>
 
 </body>
 
-
+<script src="script.js"></script>
 </html>
