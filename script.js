@@ -9,6 +9,7 @@ let content_loaded = 0;
 
 const load_screen = document.querySelector(".load__screen");
 const main_bgm = document.querySelector("#main_bgm");
+const nav1 = document.querySelector("#nav");
 
 
 
@@ -145,4 +146,15 @@ function reset_page() {
     document.querySelector(".art").style.display = 'none';
     document.querySelector(".hobbies").style.display = 'none';
     document.querySelector(".pictures").style.display = 'none';
+}
+
+function play_sound(audio) {
+    audio.currentTime = 0;
+    audio.play();
+
+}
+
+function button_click(x) {
+    play_sound(nav1);
+    x;
 }
