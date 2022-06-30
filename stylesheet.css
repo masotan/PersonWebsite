@@ -1,15 +1,22 @@
+/* classes first and then ids and then everything else */
+
+ul li{
+    text-align: center;
+}
+
+/*landing page stuff */
+
 .banner {
     color:rgb(0, 0, 0);
-    background-color: #e5b761;
 }
 
 .banner__content {
-    max-width: fit-content;
-    padding: 200px;
-    align-items: center;
-    display: flex;
+    
+    padding: 20px;
+    display: block;
     margin: 0 auto;
     font-weight: 300;
+    top:20vh;
 
 
 }
@@ -33,17 +40,32 @@
     animation: fadeIn 2s;
 }
 
-.main {
+
+/* web content begin */
+
+.content {
+    color:white;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     animation: fadeIn 5s;
-    padding: 100px;
-    align-items: center;
+    padding: 20px;
     
 }
 
-body {
-    animation: fadeIn 3s;
+.main {
+    text-align: center;
+}
+
+#main_header {
+    font-size: 3vw;
+}
+
+#main_mute_button {
+    position: absolute;
+    position: absolute;
+    top: 90vh;
+    left: 10vw;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 svg {
@@ -57,7 +79,7 @@ svg {
 
 
 .load__screen {
-    animation: fadeIn 2s;
+    animation: fadeIn 1s;
     
 }
 
@@ -66,7 +88,7 @@ svg {
     100% { opacity: 1; }
   }
 
-  .photo {
+  .pictures {
     display: none;
     align-items: center;
     text-align: center;
@@ -74,47 +96,25 @@ svg {
 
 
 #lucario {
-    width: 500px;
-    animation: growback;
-    animation-duration: 0.6s;
+    width: 50vw;
+ 
     
 }
 
-
-
-#lucario:hover {
-    width: 600px;
-    animation: grow;
-    animation-duration: 0.6s;
-}
-
-@keyframes grow {
-    0% {width: 500px;
-    };
-    100% {width: 600px;
-    };
-}
-
-@keyframes growback {
-    0% {width: 600px;
-    };
-    100% {width: 500px;
-    };
-}
-
-#pictures {
+button {
     background-color: white;
-    color:orange;
+    color:purple;
     font-weight: 12px;
     border: single;
     padding:15px 32px;
     text-decoration: center;
     display: inline-block;
     font-size: 16px;
+    margin:2vw;
 }
 
-#pictures:hover {
-    background-color: orange;
+button:hover {
+    background-color: purple;
     color:white;
     size:20px;
     font-weight: 12px;
@@ -126,6 +126,13 @@ svg {
     font-size: 16px;
 }
 
+.buttons {
+    color:black
+}
+
+.buttons:hover {
+    color:orange;
+}
 
 #shonan {
     width: 100vw;
