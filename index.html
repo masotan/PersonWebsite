@@ -118,7 +118,11 @@
 </div>
 
 <div class="content">
-            <div class="main">
+    <!--global stuff-->
+        <img id="home_button" src="home.svg" onclick="button_click(return_to_main())">
+    
+    
+    <div class="main">
 
             <div id="main_header"> <!-- this is where the title and logo go-->
             <h1>dan's smol corner</h1>
@@ -141,12 +145,15 @@
                <button onpointerenter="play_sound(nav1)" onclick="button_click(open_pictures())">Pictures</button>
             </div>
             
+            <br>
+
+            <br>
             
             <div id="main_mute">
                 <img id="main_mute_button" src="sound.svg" onclick="toggle_bgm(main_bgm)">
             </div>
-
         
+           
             </div>
 
             <div class="about">
