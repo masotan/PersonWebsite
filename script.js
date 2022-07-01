@@ -50,7 +50,7 @@ function start_menu() {
 }
 
 function rickroll() {
-    document.querySelector(".main").style.display = 'none';
+    document.querySelector("#main").style.display = 'none';
     bgm.pause();
     document.querySelector("#shonan").style.display = 'block';
     document.querySelector("#shonan").style.opacity = "1";
@@ -63,7 +63,7 @@ function rickroll() {
 window.addEventListener('load', function() {
     console.log("All assets have loaded");
     document.querySelector("#shonan").style.display = 'none';
-    set_bgm("./bgm/theme.mp3"); // initializes the bgm using main bgm // make an option for playing random bgms
+    set_bgm(random_select_bgm()); // initializes the bgm using main bgm // make an option for playing random bgms
     bgm.style.display = 'none';
     bgm.volume = 0.1;
     document.querySelector("#nav").style.display = 'none';
@@ -76,10 +76,10 @@ window.addEventListener('load', function() {
     document.querySelector("body").style.backgroundColor = "#e292e8";
     document.querySelector(".content").style.display = 'none';
     document.querySelector(".load__screen").style.display = 'none';
-    document.querySelector(".about").style.display = 'none';
-    document.querySelector(".art").style.display = 'none';
-    document.querySelector(".hobbies").style.display = 'none';
-    document.querySelector(".pictures").style.display = 'none';
+    document.querySelector("#about").style.display = 'none';
+    document.querySelector("#art").style.display = 'none';
+    document.querySelector("#hobbies").style.display = 'none';
+    document.querySelector("#pictures").style.display = 'none';
 
 
 });
@@ -87,8 +87,8 @@ window.addEventListener('load', function() {
 function open_pictures(){  
     var nav = document.getElementById("nav2");
     nav.play();
-    document.querySelector(".pictures").style.display = 'block';
-    document.querySelector(".main").style.display = 'none';
+    document.querySelector("#pictures").style.display = 'block';
+    document.querySelector("#main").style.display = 'none';
 }
 
 window.addEventListener('keypress', function(event){
@@ -102,8 +102,8 @@ window.addEventListener('keypress', function(event){
 
 document.querySelector("#lucario").addEventListener('click', function(){
     document.querySelector("#nav3").play();
-    document.querySelector(".pictures").style.display = 'none';
-    document.querySelector(".main").style.display = 'block';
+    document.querySelector("#pictures").style.display = 'none';
+    document.querySelector("#main").style.display = 'block';
     });
 
 function toggle_bgm(x) {
@@ -122,35 +122,35 @@ function toggle_bgm(x) {
 }
 function open_about() {
     reset_page();
-    document.querySelector(".about").style.display = 'block';
+    document.querySelector("#about").style.display = 'block';
 }
 
 function open_art() {
     reset_page();
-    document.querySelector(".art").style.display = 'block';
+    document.querySelector("#art").style.display = 'block';
 }
 
 function open_hobbies() {
     reset_page()
-    document.querySelector(".hobbies").style.display = 'block';
+    document.querySelector("#hobbies").style.display = 'block';
 }
 
 function open_pictures() {
     reset_page()
-    document.querySelector(".pictures").style.display = 'block';
+    document.querySelector("#pictures").style.display = 'block';
 }
 
 function return_to_main(x) {
     reset_page()
-    document.querySelector(".main").style.display = 'block';
+    document.querySelector("#main").style.display = 'block';
 }
 
 function reset_page() {
-    document.querySelector(".main").style.display = 'none';
-    document.querySelector(".about").style.display = 'none';
-    document.querySelector(".art").style.display = 'none';
-    document.querySelector(".hobbies").style.display = 'none';
-    document.querySelector(".pictures").style.display = 'none';
+    document.querySelector("#main").style.display = 'none';
+    document.querySelector("#about").style.display = 'none';
+    document.querySelector("#art").style.display = 'none';
+    document.querySelector("#hobbies").style.display = 'none';
+    document.querySelector("#pictures").style.display = 'none';
 }
 
 function play_sound(audio) {
@@ -159,21 +159,51 @@ function play_sound(audio) {
 
 }
 
-function set_bgm(music) {
-    bgm.src = music
-}
-
 function button_click(x) {
     play_sound(nav1);
     x;
 }
 
+function main_button() {
+    if (document.querySelector("#main").style.display == 'none') {
+    play_sound(nav3);
+    return_to_main();
+    }
+}
+
+//define the bgm track list array
+
+bgm_track_list = ["camera.mp3", "main.mp3", "theme.mp3"];
+
 function random_select_bgm() {
     // insert random select function here
+    let num_of_tracks = bgm_track_list.length;
+    let selected;
+    let adjusted_selected;
+    let selected_track;
+    selected = Math.random() * num_of_tracks;
+    adjusted_selected = Math.floor(selected);
+    selected_track = bgm_track_list[adjusted_selected];
+
+    
+    return selected_track
+    
+    
+    alert("NOW PLAYING " + selected_track + "!!!");
+    set_bgm("./bgm/" + selected_track);
+    bgm.play()
+        // call the array and input the selected index and assign the value to selected track
+    // play the music from the selected track
+    
 }
 
 // eliminate the loading screen
 // implement a real loading screen
 
-//make a cd system that starts playing when the page loads
-// 1. plays a random song for main 2. add all the songs select a song 3. put the song into the player
+function set_bgm(music) {
+    bgm.src = "./bgm/" + music;
+}
+
+function play_bgm() {
+    bgm.play();
+}

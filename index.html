@@ -120,11 +120,11 @@
 
 <div class="content">
     <!--global stuff-->
-        <img id="home_button" src="home.svg" onclick="button_click(return_to_main())">
+        <img id="home_button" src="home.svg" onclick="main_button()">
     
         
     
-    <div class="main">
+    <div id="main" class="pages">
 
             <div id="main_header"> <!-- this is where the title and logo go-->
             <h1>danos smol corner</h1>
@@ -155,7 +155,7 @@
            
             </div>
 
-            <div class="about">
+            <div id="about" class="pages">
 
                 <div id="about_header"> <!-- this is where the title and logo go-->
                     <h1>About</h1>
@@ -173,19 +173,19 @@
 
             </div>
 
-            <div class="art">
+            <div id="art" class="pages">
                 <div id="art_header"> <!-- this is where the title and logo go-->
                     <h1>Art</h1>
                     </div>
             </div>
 
-            <div class="hobbies">
+            <div id="hobbies" class="pages">
                 <div id="hobbies_header"> <!-- this is where the title and logo go-->
                     <h1>Hobbies</h1>
                     </div>
             </div>
 
-            <div class="pictures">
+            <div id="pictures" class="pages">
                 <div id="pictures_header"> <!-- this is where the title and logo go-->
                     <h1>Pictures</h1>
                     </div>
@@ -205,7 +205,7 @@
             <source src="rickroll.mp4" type="video/mp4" >
         </video>
 
-<audio controls="controls"id="bgm" width="0px" height="0px">
+<audio controls="controls"id="bgm" width="0px" height="0px" loop=1>
         <source type="audio/mp3" />
       Your browser does not support the audio tag.
 </audio>
