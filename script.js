@@ -49,16 +49,6 @@ function start_menu() {
     bgm.play();
 }
 
-function rickroll() {
-    document.querySelector("#main").style.display = 'none';
-    bgm.pause();
-    document.querySelector("#shonan").style.display = 'block';
-    document.querySelector("#shonan").style.opacity = "1";
-    document.querySelector("#shonan").play();
-    document.querySelector("#shonan").volume = 0.1;
-}
-
-
 // initializer
 window.addEventListener('load', function() {
     console.log("All assets have loaded");
@@ -207,3 +197,6 @@ function set_bgm(music) {
 function play_bgm() {
     bgm.play();
 }
+
+// add socials such as github and linkedin
+//add a gallery section to your code or something
