@@ -49,10 +49,10 @@ function start_menu() {
     bgm.play();
 }
 
+
 // initializer
 window.addEventListener('load', function() {
     console.log("All assets have loaded");
-    document.querySelector("#shonan").style.display = 'none';
     set_bgm(random_select_bgm()); // initializes the bgm using main bgm // make an option for playing random bgms
     bgm.style.display = 'none';
     bgm.volume = 0.1;
