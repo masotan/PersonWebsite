@@ -4,13 +4,14 @@
 
 let landing_page_exit = 0;
 let content_loaded = 0;
+let play_state = 1;
 
 // getter constants
 
 const load_screen = document.querySelector(".load__screen");
-const main_bgm = document.querySelector("#main_bgm");
+const bgm = document.querySelector("#bgm");
 const nav1 = document.querySelector("#nav");
-
+const hover = document.querySelector("#hover");
 
 
 document.querySelector(".banner__close").addEventListener('click', function(){
@@ -45,13 +46,12 @@ function start_menu() {
     document.querySelector("body").style.backgroundImage = "url('https://static.displate.com/857x1200/displate/2019-09-05/06cd4c0616ca89d78f40b74224752308_e0fd5739385af0b157f707eca9974494.jpg')";
     document.querySelector(".content").style.display = 'block';
     document.querySelector("body").style.animation = "fadeIn 5s";
-    var audio = document.getElementById("main_bgm");
-    audio.play();
+    bgm.play();
 }
 
 function rickroll() {
     document.querySelector(".main").style.display = 'none';
-    main_bgm.pause();
+    bgm.pause();
     document.querySelector("#shonan").style.display = 'block';
     document.querySelector("#shonan").style.opacity = "1";
     document.querySelector("#shonan").play();
@@ -63,14 +63,16 @@ function rickroll() {
 window.addEventListener('load', function() {
     console.log("All assets have loaded");
     document.querySelector("#shonan").style.display = 'none';
-    main_bgm.style.display = 'none';
-    main_bgm.volume = 0.1;
+    set_bgm("./bgm/theme.mp3"); // initializes the bgm using main bgm // make an option for playing random bgms
+    bgm.style.display = 'none';
+    bgm.volume = 0.1;
     document.querySelector("#nav").style.display = 'none';
     document.querySelector("#nav").volume = 0.3;
     document.querySelector("#nav2").style.display = 'none';
     document.querySelector("#nav2").volume = 0.2;
     document.querySelector("#nav3").style.display = 'none';
     document.querySelector("#nav3").volume = 0.3;
+    document.querySelector("#hover").style.display = 'none';
     document.querySelector("body").style.backgroundColor = "#e292e8";
     document.querySelector(".content").style.display = 'none';
     document.querySelector(".load__screen").style.display = 'none';
@@ -105,13 +107,16 @@ document.querySelector("#lucario").addEventListener('click', function(){
     });
 
 function toggle_bgm(x) {
-    if(x.paused != 1) {
-    x.pause();
+
+    if(play_state == 1) {
+    x.volume = "0";
     document.querySelector("#main_mute_button").src = "muted.svg";
+    play_state = 0;
     } 
     else {
-    x.play();
+    x.volume = "0.1";
     document.querySelector("#main_mute_button").src = "sound.svg";
+    play_state = 1;
     }
 
 }
@@ -154,7 +159,21 @@ function play_sound(audio) {
 
 }
 
+function set_bgm(music) {
+    bgm.src = music
+}
+
 function button_click(x) {
     play_sound(nav1);
     x;
 }
+
+function random_select_bgm() {
+    // insert random select function here
+}
+
+// eliminate the loading screen
+// implement a real loading screen
+
+//make a cd system that starts playing when the page loads
+// 1. plays a random song for main 2. add all the songs select a song 3. put the song into the player

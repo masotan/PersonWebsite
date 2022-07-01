@@ -141,10 +141,10 @@
 <br>
 
             <div id="main_menu"> <!-- this is where your main menu is-->
-               <button onpointerenter="play_sound(nav1)" onclick="button_click(open_about())">About</button>
-               <button onpointerenter="play_sound(nav1)" onclick="button_click(open_art())">Art</button>
-               <button onpointerenter="play_sound(nav1)" onclick="button_click(open_hobbies())">Hobbies</button>
-               <button onpointerenter="play_sound(nav1)" onclick="button_click(open_pictures())">Pictures</button>
+               <button onpointerenter="play_sound(hover)" onclick="button_click(open_about())">About</button>
+               <button onpointerenter="play_sound(hover)" onclick="button_click(open_art())">Art</button>
+               <button onpointerenter="play_sound(hover)" onclick="button_click(open_hobbies())">Hobbies</button>
+               <button onpointerenter="play_sound(hover)" onclick="button_click(open_pictures())">Pictures</button>
             </div>
             
             <br>
@@ -197,7 +197,7 @@
             <br><br>
 
             <div id="main_mute">
-                <img id="main_mute_button" src="sound.svg" onclick="toggle_bgm(main_bgm)">
+                <img id="main_mute_button" src="sound.svg" onclick="toggle_bgm(bgm)">
             </div>
 </div>
 
@@ -205,11 +205,16 @@
             <source src="rickroll.mp4" type="video/mp4" >
         </video>
 
-<audio controls="controls" volume=0.1 id="main_bgm" width="0px" height="0px">
-        <source src="audio.mp3" type="audio/mp3" />
+<audio controls="controls"id="bgm" width="0px" height="0px">
+        <source type="audio/mp3" />
       Your browser does not support the audio tag.
 </audio>
 
+
+<audio controls="controls" id="hover" width="0px" height="0px">
+    <source src="hover.mp3" type="audio/mp3" />
+  Your browser does not support the audio tag.
+</audio>
 
 <audio controls="controls" id="nav" width="0px" height="0px">
     <source src="playstation4nav.mp3" type="audio/mp3" />
