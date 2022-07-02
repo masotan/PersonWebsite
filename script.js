@@ -43,7 +43,7 @@ function start_loading() {
 
 function start_menu() {
     document.querySelector(".load__screen").style.display = 'none';
-    document.querySelector("body").style.backgroundImage = "url('https://static.displate.com/857x1200/displate/2019-09-05/06cd4c0616ca89d78f40b74224752308_e0fd5739385af0b157f707eca9974494.jpg')";
+    document.querySelector("body").style.backgroundImage = "url('bg.webp')";
     document.querySelector(".content").style.display = 'block';
     document.querySelector("body").style.animation = "fadeIn 5s";
     bgm.play();
