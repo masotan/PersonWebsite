@@ -55,7 +55,7 @@ window.addEventListener('load', function() {
     console.log("All assets have loaded");
     set_bgm(random_select_bgm()); // initializes the bgm using main bgm // make an option for playing random bgms
     bgm.style.display = 'none';
-    bgm.volume = 0.1;
+    bgm.volume = 0.3;
     document.querySelector("#nav").style.display = 'none';
     document.querySelector("#nav").volume = 0.3;
     document.querySelector("#nav2").style.display = 'none';
@@ -96,19 +96,22 @@ document.querySelector("#lucario").addEventListener('click', function(){
     document.querySelector("#main").style.display = 'block';
     });
 
+let initial_volume = "0.5";
+
 function toggle_bgm(x) {
 
     if(play_state == 1) {
+    initial_volume = bgm.volume;
     x.volume = "0";
     document.querySelector("#main_mute_button").src = "muted.svg";
     play_state = 0;
     } 
     else {
-    x.volume = "0.1";
+    x.volume = initial_volume; // set the volume to the initial state
     document.querySelector("#main_mute_button").src = "sound.svg";
     play_state = 1;
     }
-
+//dont forget to save the audio volume state so that the app does not rewrite the volume state
 }
 function open_about() {
     reset_page();
@@ -200,3 +203,55 @@ function play_bgm() {
 
 // add socials such as github and linkedin
 //add a gallery section to your code or something
+
+
+
+
+// volume rocker function
+
+var e = document.querySelector('.volume-slider-con');
+var eInner = document.querySelector('.volume-slider');
+var audio = document.querySelector('#bgm');
+var drag = false;
+e.addEventListener('mousedown',function(ev){
+   drag = true;
+   updateBar(ev.clientX);
+});
+document.addEventListener('mousemove',function(ev){
+   if(drag){
+      updateBar(ev.clientX);
+   }
+});
+document.addEventListener('mouseup',function(ev){
+ drag = false;
+});
+var updateBar = function (x, vol) {
+   var volume = e;
+        var percentage;
+        //if only volume have specificed
+        //then direct update volume
+        if (vol) {
+            percentage = vol * 100;
+        } else {
+            var position = x - volume.offsetLeft;
+            percentage = 100 * position / volume.clientWidth;
+        }
+
+        if (percentage > 100) {
+            percentage = 100;
+        }
+        if (percentage < 0) {
+            percentage = 0;
+        }
+
+        //update volume bar and video volume
+        eInner.style.width = percentage +'%';
+
+        if (play_state == 1) {
+        audio.volume = percentage / 100;
+    } else {
+        initial_volume = percentage / 100;
+    }
+};
+
+eInner.style.width = 30 + '%';
