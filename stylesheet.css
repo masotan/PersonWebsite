@@ -166,12 +166,12 @@ button:hover {
 /*volume rocker*/
 
 .volume-slider-con{
-    height:20px;
-    width:50%;
-    background-color:#ddd;
-    left: 25vw;
+    height: 20px;
+    width: 50%;
+    background-color: #ddd;
     position: relative;
     text-align: center;
+    margin: auto;
   }
   .volume-slider{
      height:100%;
