@@ -104,10 +104,18 @@ svg {
   }
 
 
+
 #lucario {
-    width: 50vw;
- 
-    
+    width: 30vw;
+
+}
+
+#serp {
+    height: 35vw;
+    display: table-cell;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
 }
 
 button {
@@ -179,10 +187,12 @@ button:hover {
     position: relative;
     text-align: center;
     margin: auto;
+    display: flex;
   }
   .volume-slider{
      height:100%;
      width:100%;
      background-color:rgb(255, 181, 253);
      text-align: center;
+     display: flex;
   }
