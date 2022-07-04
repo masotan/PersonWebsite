@@ -70,6 +70,7 @@ window.addEventListener('load', function() {
     document.querySelector("#art").style.display = 'none';
     document.querySelector("#hobbies").style.display = 'none';
     document.querySelector("#pictures").style.display = 'none';
+    document.querySelector("#contact").style.display = 'none';
 
 
 });
@@ -133,6 +134,11 @@ function open_pictures() {
     document.querySelector("#pictures").style.display = 'block';
 }
 
+function open_contact() {
+    reset_page()
+    document.querySelector("#contact").style.display = 'block';
+}
+
 function return_to_main(x) {
     reset_page()
     document.querySelector("#main").style.display = 'block';
@@ -144,6 +150,7 @@ function reset_page() {
     document.querySelector("#art").style.display = 'none';
     document.querySelector("#hobbies").style.display = 'none';
     document.querySelector("#pictures").style.display = 'none';
+    document.querySelector("#contact").style.display = 'none';
 }
 
 function play_sound(audio) {
