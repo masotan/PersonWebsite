@@ -60,6 +60,13 @@ ul li{
     padding: 20px;
     
 }
+#home_button {
+    position: fixed;
+    width: 8vw;
+    top: 1vh;
+    left: 90vw;
+    color: white;
+}
 
 #main_mute {
     text-align: center;
@@ -85,6 +92,11 @@ ul li{
 
 #main {
     text-align: center;
+}
+
+#main_menu {
+    width: 75vw;
+    margin: auto;
 }
 
 
@@ -163,6 +175,16 @@ button:hover {
     font-size: 16px;
 }
 
+#about_leave_button {
+    background-color: white;
+    color:black;
+}
+
+#about_leave_button:hover {
+    background-color: black;
+    color:white;
+}
+
 .buttons {
     color:black
 }
@@ -198,6 +220,16 @@ button:hover {
     100% {color:white};
 }
 
+#art_body {
+    height: 70vh;
+    position: relative;
+}
+
+#contact_body {
+    height: 70vh;
+    position: relative;
+}
+
 /*volume rocker*/
 
 .volume-slider-con{
@@ -212,7 +244,15 @@ button:hover {
   .volume-slider{
      height:100%;
      width:100%;
-     background-color:rgb(255, 181, 253);
+     background-color:#ffb5fd;
      text-align: center;
      display: flex;
+  }
+
+  #volume_control {
+    width: 100vw;
+    margin: auto;
+    position: fixed;
+    top: 87vh;
+    left: 0vw;
   }

@@ -161,11 +161,31 @@ function open_pictures() {
 }
 
 function open_contact() {
-    reset_page()
+    reset_page();
+    set_bgm('contact.mp3');
+    play_bgm();
     document.querySelector("#contact").style.display = 'block';
+    document.querySelector('body').style.backgroundBlendMode = "luminosity";
+    document.querySelector('#home_button').style.display = "none";
+    document.querySelector('#randomize_div').style.display = "none";
+    document.querySelector('.volume-slider').style.backgroundColor = "#ffffff";
+    document.querySelector('#current_track_div').style.display = "none";
+
 }
 
-function return_to_main(x) {
+function close_contact() {
+    document.querySelector('body').style.backgroundBlendMode = "";
+    document.querySelector('#home_button').style.display = "initial";
+    document.querySelector('#randomize_div').style.display = "block";
+    document.querySelector('.volume-slider').style.backgroundColor = "#ffb5fd";
+    document.querySelector('#current_track_div').style.display = "block";
+    reset_page()
+    return_to_main()
+    set_bgm(random_select_bgm());
+    play_bgm();
+}
+
+function return_to_main() {
     reset_page()
     document.querySelector("#main").style.display = 'block';
 }
@@ -178,6 +198,8 @@ function reset_page() {
     document.querySelector("#pictures").style.display = 'none';
     document.querySelector("#contact").style.display = 'none';
 }
+
+
 
 function play_sound(audio) {
     audio.currentTime = 0;
