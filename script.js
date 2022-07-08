@@ -1,4 +1,6 @@
+// name variables
 
+let current_track_name = '';
 
 // state variables
 
@@ -57,6 +59,19 @@ main_counter++;
 if (main_counter == 5) {
     document.querySelector('#main_header').querySelector('h1').innerHTML = "UWU";
     document.querySelector('#main_header').querySelector('h1').style.fontSize = '90px';
+}
+if (main_counter == 10) {
+    document.querySelector('#main_header').querySelector('h1').innerHTML = "OWO";
+    document.querySelector('#main_header').querySelector('h1').style.fontSize = '90px';
+}
+
+if (main_counter == 15) {
+    document.querySelector('#main_header').querySelector('h1').innerHTML = "O//W//O";
+    document.querySelector('#main_header').querySelector('h1').style.fontSize = '90px';
+}
+
+if (main_counter == 25) {
+    cocaine()
 }
 }
 
@@ -195,17 +210,13 @@ function random_select_bgm() {
     let selected;
     let adjusted_selected;
     let selected_track;
+    
+    do {
     selected = Math.random() * num_of_tracks;
     adjusted_selected = Math.floor(selected);
     selected_track = bgm_track_list[adjusted_selected];
-
-    
-    return selected_track
-    
-    
-    alert("NOW PLAYING " + selected_track + "!!!");
-    set_bgm("./bgm/" + selected_track);
-    bgm.play()
+    } while (selected_track==current_track_name)
+    return selected_track;
         // call the array and input the selected index and assign the value to selected track
     // play the music from the selected track
     
@@ -218,6 +229,7 @@ function set_bgm(music) {
     bgm.src = "./bgm/" + music;
     var result = /[^/]*$/.exec(bgm.src)[0];
     current_track.innerHTML = result;
+    current_track_name = result;
 
 }
 
@@ -282,4 +294,31 @@ eInner.style.width = 30 + '%';
 
 
 
+function cocaine() {
 
+    document.querySelector("body").style.backgroundImage = "url('horny_eevee.jpg')";
+
+    let array = document.querySelectorAll('button');
+    for (i=0;i<array.length;i++) {
+        array[i].innerHTML = "POOP";
+        array[i].style.backgroundImage = "url('horny_buttons.jpg')";
+        array[i].style.backgroundPositionX = "center";
+        array[i].style.backgroundSize = "cover";
+        array[i].onclick = () => open('https://www.youtube.com/watch?v=beeKGfKHlLk');
+    }
+
+    array = document.querySelectorAll('h1');
+    for (i=0; i<array.length; i++) {
+        array[i].innerHTML = "horny mode activated";
+    }
+    document.querySelector('#hover').src = './fart.mp3';
+    (function(){
+        document.documentElement.style.transitionDuration="60s"; document.documentElement.style.transitionTimingFunction="ease-in" ; document.documentElement.style.transform="rotate(720deg)";
+    }());
+    set_bgm('dummy.mp3');
+    play_bgm()
+
+    
+
+    // click button, opens tab, chinese rick rolls them.
+}

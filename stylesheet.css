@@ -66,17 +66,19 @@ ul li{
 }
 
 #randomize {
-    position: absolute;
+    position: fixed;
+    top:0%;
     left: 2px;
     padding: 5px;
     color: white;
     background-color: purple;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 #current_track_div {
-    position: absolute;
+    position: fixed;
     text-align: center;
-    top: 90vh;
+    top: 96vh;
     width: max-content;
     font-size: 12px;
 }
