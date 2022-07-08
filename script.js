@@ -5,11 +5,11 @@ let current_track_name = '';
 // state variables
 
 let landing_page_exit = 0;
-let content_loaded = 0;
 let play_state = 1;
 
 // getter constants
 
+const init = document.querySelector('#init_div');
 const load_screen = document.querySelector(".load__screen");
 const bgm = document.querySelector("#bgm");
 const nav1 = document.querySelector("#nav");
@@ -28,27 +28,17 @@ function start_loading() {
     document.querySelector("#nav").play();
     document.querySelector(".banner__close").closest(".banner").style.display = 'none';
     document.querySelector(".load__screen").style.display = 'block';
-    document.querySelector("body").style.animation = "fadeIn 5s";
+    document.querySelector("body").style.animation = "fadeIn 2s";
     document.querySelector("body").style.backgroundColor = "black";
-
-    load_screen.addEventListener('click', function() {
-        content_loaded = 1;
-        start_menu()
-    });
-    
-
-    if (content_loaded == 0) {
     setTimeout(function(){
         start_menu();
-    }, 3000);
-    }
+    }, Math.random()*3000);
 }
 
 function start_menu() {
     document.querySelector(".load__screen").style.display = 'none';
     document.querySelector("body").style.backgroundImage = "url('bg.webp')";
     document.querySelector(".content").style.display = 'block';
-    document.querySelector("body").style.animation = "fadeIn 5s";
     bgm.play();
 }
 
@@ -79,6 +69,7 @@ if (main_counter == 25) {
 // initializer
 window.addEventListener('load', function() {
     console.log("All assets have loaded");
+    init.style.display = "none";
     set_bgm(random_select_bgm()); // sets bgm source to random in list
     bgm.style.display = 'none';
     bgm.volume = 0.3;
@@ -165,6 +156,8 @@ function open_contact() {
     set_bgm('contact.mp3');
     play_bgm();
     document.querySelector("#contact").style.display = 'block';
+    document.querySelector("body").style.backgroundImage = "url('city.jpg')";
+    document.querySelector("body").style.backgroundSize = "cover";
     document.querySelector('body').style.backgroundBlendMode = "luminosity";
     document.querySelector('#home_button').style.display = "none";
     document.querySelector('#randomize_div').style.display = "none";
@@ -174,6 +167,7 @@ function open_contact() {
 }
 
 function close_contact() {
+    document.querySelector("body").style.backgroundImage = "url('bg.webp')";
     document.querySelector('body').style.backgroundBlendMode = "";
     document.querySelector('#home_button').style.display = "initial";
     document.querySelector('#randomize_div').style.display = "block";
