@@ -37,6 +37,7 @@ function start_loading() {
 
 function start_menu() {
     document.querySelector(".load__screen").style.display = 'none';
+    document.querySelector("body").style.backgroundSize = "cover";
     document.querySelector("body").style.backgroundImage = "url('bg.webp')";
     document.querySelector(".content").style.display = 'block';
     bgm.play();
