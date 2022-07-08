@@ -50,6 +50,16 @@ function start_menu() {
     bgm.play();
 }
 
+let main_counter = 0;
+
+function set_main_counter() {
+main_counter++;
+if (main_counter == 5) {
+    document.querySelector('#main_header').querySelector('h1').innerHTML = "UWU";
+    document.querySelector('#main_header').querySelector('h1').style.fontSize = '90px';
+}
+}
+
 
 // initializer
 window.addEventListener('load', function() {
@@ -269,3 +279,7 @@ var updateBar = function (x, vol) {
 };
 
 eInner.style.width = 30 + '%';
+
+
+
+
