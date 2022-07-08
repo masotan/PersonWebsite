@@ -65,6 +65,22 @@ ul li{
     text-align: center;
 }
 
+#randomize {
+    position: absolute;
+    left: 2px;
+    padding: 5px;
+    color: white;
+    background-color: purple;
+}
+
+#current_track_div {
+    position: absolute;
+    text-align: center;
+    top: 90vh;
+    width: max-content;
+    font-size: 12px;
+}
+
 #main {
     text-align: center;
 }

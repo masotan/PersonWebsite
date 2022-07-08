@@ -122,8 +122,10 @@
     
     <!--global stuff-->
         <img id="home_button" src="home.svg" onclick="main_button()">
-    
-        
+        <button id="randomize" onpointerenter="play_sound(hover)" onclick="play_bgm(set_bgm(random_select_bgm()))">Randomize</button>
+    <div id="current_track_div">
+        <p>Now playing: <span id="current_track"></span></p>
+    </div>
     
     <div id="main" class="pages">
 

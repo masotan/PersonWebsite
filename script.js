@@ -12,6 +12,7 @@ const load_screen = document.querySelector(".load__screen");
 const bgm = document.querySelector("#bgm");
 const nav1 = document.querySelector("#nav");
 const hover = document.querySelector("#hover");
+const current_track = document.querySelector("#current_track");
 
 
 document.querySelector(".banner__close").addEventListener('click', function(){
@@ -53,7 +54,7 @@ function start_menu() {
 // initializer
 window.addEventListener('load', function() {
     console.log("All assets have loaded");
-    set_bgm(random_select_bgm()); // initializes the bgm using main bgm // make an option for playing random bgms
+    set_bgm(random_select_bgm()); // sets bgm source to random in list
     bgm.style.display = 'none';
     bgm.volume = 0.3;
     document.querySelector("#nav").style.display = 'none';
@@ -173,7 +174,10 @@ function main_button() {
 
 //define the bgm track list array
 
-bgm_track_list = ["camera.mp3", "main.mp3", "theme.mp3"];
+
+//1. add track to the bgm folder
+//2. add track to bgm list
+bgm_track_list = ["camera.mp3", "main.mp3", "theme.mp3", "nintendovideo.mp3", "dnbshop.mp3", "eshopbossa.mp3", "july2014.mp3"];
 
 function random_select_bgm() {
     // insert random select function here
@@ -202,6 +206,9 @@ function random_select_bgm() {
 
 function set_bgm(music) {
     bgm.src = "./bgm/" + music;
+    var result = /[^/]*$/.exec(bgm.src)[0];
+    current_track.innerHTML = result;
+
 }
 
 function play_bgm() {
