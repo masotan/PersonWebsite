@@ -194,9 +194,6 @@
         <div id="randomize_div">
         <button id="randomize" onpointerenter="play_sound(hover)" onclick="play_bgm(set_bgm(random_select_bgm()))">Randomize</button>
         </div>
-    <div id="current_track_div">
-        <p>Now playing: <span id="current_track"></span></p>
-    </div>
     
     <div id="main" class="pages">
 
@@ -306,9 +303,10 @@
             
                
                 <p>discord: Stale Fish#7545</p>
-                <button id="about_leave_button" onpointerenter="play_sound(hover)" onclick="button_click(close_contact())">Leave</button>
+                <button id="contact_leave_button" onpointerenter="play_sound(hover)" onclick="button_click(close_contact())">Leave</button>
                 </div>
             </div>
+            <footer>
             <div id="volume_control">
             <div id="main_mute">
                 <img id="main_mute_button" src="sound.svg" onclick="toggle_bgm(bgm)">
@@ -316,7 +314,10 @@
             <div class="volume-slider-con">
                 <div class="volume-slider"></div>
             </div>
-        
+            <div id="current_track_div">
+                <p>Now playing: <span id="current_track"></span></p>
+            </div>
+            </footer>
 </div>
 <audio controls="controls"id="bgm" width="0px" height="0px" loop=1>
         <source type="audio/mp3" />

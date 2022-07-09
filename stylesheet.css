@@ -15,6 +15,7 @@ ul li{
 
 .banner {
     color:rgb(0, 0, 0);
+    padding: 25vh 0;
 }
 
 .banner__content {
@@ -58,6 +59,8 @@ ul li{
     font-family: Arial, Helvetica, sans-serif;
     animation: fadeIn 1s;
     padding: 20px;
+    padding-bottom: -100px;
+    max-height: 100vh;
     
 }
 #home_button {
@@ -83,7 +86,7 @@ ul li{
 }
 
 #current_track_div {
-    position: fixed;
+    position: inherit;
     text-align: center;
     top: 90vh;
     width: max-content;
@@ -95,7 +98,7 @@ ul li{
 }
 
 #main_menu {
-    width: 75vw;
+    width: 90vw;
     margin: auto;
 }
 
@@ -175,12 +178,12 @@ button:hover {
     font-size: 16px;
 }
 
-#about_leave_button {
+#contact_leave_button {
     background-color: white;
     color:black;
 }
 
-#about_leave_button:hover {
+#contact_leave_button:hover {
     background-color: black;
     color:white;
 }
@@ -220,9 +223,20 @@ button:hover {
     100% {color:white};
 }
 
+#about {
+    padding: 10vh 0 0 0;
+}
+
 #art_body {
     height: 70vh;
     position: relative;
+}
+#hobbies {
+    padding: 20vh 0 0 0;
+}
+
+#contact {
+    padding-top: 10vh;
 }
 
 #contact_body {
@@ -251,9 +265,12 @@ button:hover {
   }
 
   #volume_control {
-    width: 100vw;
     margin: auto;
-    position: fixed;
-    top: 80vh;
-    left: 0vw;
+    position: inherit;
+    top: 75vh;
+    left: 10vw;
+    text-align: center;
+    justify-content: center;
+    width: auto;
+}
   }
