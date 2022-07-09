@@ -164,6 +164,7 @@ function open_contact() {
     document.querySelector('#randomize_div').style.display = "none";
     document.querySelector('.volume-slider').style.backgroundColor = "#ffffff";
     document.querySelector('#current_track_div').style.display = "none";
+    document.querySelector('#volume_control').style.display = "none";
 
 }
 
@@ -174,6 +175,7 @@ function close_contact() {
     document.querySelector('#randomize_div').style.display = "block";
     document.querySelector('.volume-slider').style.backgroundColor = "#ffb5fd";
     document.querySelector('#current_track_div').style.display = "block";
+    document.querySelector('#volume_control').style.display = "block";
     reset_page()
     return_to_main()
     set_bgm(random_select_bgm());
