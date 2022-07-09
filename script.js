@@ -60,7 +60,7 @@ if (main_counter == 10) {
 
 if (main_counter == 15) {
     document.querySelector('#main_header').querySelector('h1').innerHTML = "O//W//O";
-    document.querySelector('#main_header').querySelector('h1').style.fontSize = '90px';
+    document.querySelector('#main_header').querySelector('h1').style.fontSize = '50px';
 }
 
 if (main_counter == 25) {
@@ -161,7 +161,8 @@ function open_contact() {
     document.querySelector("#contact").style.display = 'block';
     document.querySelector("body").style.backgroundImage = "url('city.jpg')";
     document.querySelector("body").style.backgroundSize = "cover";
-    document.querySelector('body').style.backgroundBlendMode = "luminosity";
+    document.querySelector("body").style.backgroundColor = "#ff0000";
+    document.querySelector('body').style.backgroundBlendMode = "hard-light";
     document.querySelector('#home_button').style.display = "none";
     document.querySelector('#randomize_div').style.display = "none";
     document.querySelector('.volume-slider').style.backgroundColor = "#ffffff";
@@ -318,6 +319,7 @@ eInner.style.width = 30 + '%';
 function cocaine() {
 
     document.querySelector("body").style.backgroundImage = "url('horny_eevee.jpg')";
+    document.querySelector("body").style.backgroundSize = ""
 
     let array = document.querySelectorAll('button');
     for (i=0;i<array.length;i++) {
@@ -331,10 +333,11 @@ function cocaine() {
     array = document.querySelectorAll('h1');
     for (i=0; i<array.length; i++) {
         array[i].innerHTML = "horny mode activated";
+        array[i].style.fontSize = "30px";
     }
     document.querySelector('#hover').src = './fart.mp3';
     (function(){
-        document.documentElement.style.transitionDuration="60s"; document.documentElement.style.transitionTimingFunction="ease-in" ; document.documentElement.style.transform="rotate(720deg)";
+        document.documentElement.style.transitionDuration="60s"; document.documentElement.style.transitionTimingFunction="ease-in" ; document.documentElement.style.transform="rotate(1080deg)";
     }());
     set_bgm('dummy.mp3');
     play_bgm()
