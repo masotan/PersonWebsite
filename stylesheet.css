@@ -98,7 +98,6 @@ ul li{
 }
 
 #main_menu {
-    width: 90vw;
     margin: auto;
 }
 
@@ -273,4 +272,12 @@ button:hover {
     justify-content: center;
     width: auto;
 }
-  }
+
+
+#astronaut {
+    cursor: grab;
+    touch-action: pan-y;
+    display: inline-block;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}

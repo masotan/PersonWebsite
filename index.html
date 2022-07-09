@@ -7,6 +7,8 @@
     "icon.webp" 
         type = "image/x-icon">
     <link rel="stylesheet" href="stylesheet.css"/>
+
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
 </head>
 
 <body>
@@ -204,6 +206,14 @@
             <div id="main_sprite"> <!--this is where your pixel animation will go-->
                     <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bfa23285-62f1-4c8d-810d-b8103d45647a/dcpa5q1-08b99da9-fa26-4fb0-a6a0-38a614c0321d.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JmYTIzMjg1LTYyZjEtNGM4ZC04MTBkLWI4MTAzZDQ1NjQ3YVwvZGNwYTVxMS0wOGI5OWRhOS1mYTI2LTRmYjAtYTZhMC0zOGE2MTRjMDMyMWQuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.uuli25eSpQyFeqqdEBrJ4tmn1fjbr3-VTrW5JovDW-M" height="90vh">
                     <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d80318c6-c0eb-4721-ab49-9ca3b1908ced/d2oub88-af87a060-7cc5-4215-9a23-54b3bd04c6e3.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Q4MDMxOGM2LWMwZWItNDcyMS1hYjQ5LTljYTNiMTkwOGNlZFwvZDJvdWI4OC1hZjg3YTA2MC03Y2M1LTQyMTUtOWEyMy01NGIzYmQwNGM2ZTMuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.0NMF_6biR2rCHB7olhIYZXkeh6ET-3dQJeAOnnqE3fQ" height="135vh">
+                    <model-viewer
+                id="astronaut"
+                src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                alt="A 3D model of an astronaut"
+                auto-rotate
+                camera-controls
+                background-color="#455A64"
+              ></model-viewer>
             </div>
 
 
@@ -302,7 +312,7 @@
                 <p>Let's make something happen.</p>
             
                
-                <p>discord: Stale Fish#7545</p>
+                <p>discord: <a href="https://discordapp.com/users/894932631026798612">Stale Fish#7545</a></p>
                 <button id="contact_leave_button" onpointerenter="play_sound(hover)" onclick="button_click(close_contact())">Leave</button>
                 </div>
             </div>
@@ -345,7 +355,14 @@
   Your browser does not support the audio tag.
 </audio>
 
-
+<script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
 
 
 </body>
