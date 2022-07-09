@@ -85,7 +85,7 @@ ul li{
 #current_track_div {
     position: fixed;
     text-align: center;
-    top: 96vh;
+    top: 90vh;
     width: max-content;
     font-size: 12px;
 }
@@ -254,6 +254,6 @@ button:hover {
     width: 100vw;
     margin: auto;
     position: fixed;
-    top: 87vh;
+    top: 80vh;
     left: 0vw;
   }
