@@ -83,6 +83,7 @@ window.addEventListener('load', function() {
     document.querySelector("#nav3").style.display = 'none';
     document.querySelector("#nav3").volume = 0.3;
     document.querySelector("#hover").style.display = 'none';
+    document.querySelector("#hover").volume = 0.5;
     document.querySelector("body").style.backgroundColor = "#e292e8";
     document.querySelector(".content").style.display = 'none';
     document.querySelector(".load__screen").style.display = 'none';
