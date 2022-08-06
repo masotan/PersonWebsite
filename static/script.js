@@ -40,7 +40,7 @@ function start_loading() {
 function start_menu() {
     document.querySelector(".load__screen").style.display = 'none';
     document.querySelector("body").style.backgroundSize = "cover";
-    document.querySelector("body").style.backgroundImage = "url('bg.webp')";
+    document.querySelector("body").style.backgroundImage = "url('assets/bg.webp')";
     document.querySelector(".content").style.display = 'block';
     bgm.play();
 }
@@ -125,12 +125,12 @@ function toggle_bgm(x) {
     if(play_state == 1) {
     initial_volume = bgm.volume;
     x.volume = "0";
-    document.querySelector("#main_mute_button").src = "muted.svg";
+    document.querySelector("#main_mute_button").src = "assets/muted.svg";
     play_state = 0;
     } 
     else {
     x.volume = initial_volume; // set the volume to the initial state
-    document.querySelector("#main_mute_button").src = "sound.svg";
+    document.querySelector("#main_mute_button").src = "assets/sound.svg";
     play_state = 1;
     }
 //dont forget to save the audio volume state so that the app does not rewrite the volume state
@@ -160,7 +160,7 @@ function open_contact() {
     set_bgm('contact.mp3');
     play_bgm();
     document.querySelector("#contact").style.display = 'block';
-    document.querySelector("body").style.backgroundImage = "url('city.jpg')";
+    document.querySelector("body").style.backgroundImage = "url('assets/city.jpg')";
     document.querySelector("body").style.backgroundSize = "cover";
     document.querySelector("body").style.backgroundColor = "#ff0000";
     document.querySelector('body').style.backgroundBlendMode = "hard-light";
@@ -173,7 +173,7 @@ function open_contact() {
 }
 
 function close_contact() {
-    document.querySelector("body").style.backgroundImage = "url('bg.webp')";
+    document.querySelector("body").style.backgroundImage = "url('assets/bg.webp')";
     document.querySelector('body').style.backgroundBlendMode = "";
     document.querySelector('#home_button').style.display = "initial";
     document.querySelector('#randomize_div').style.display = "block";
@@ -249,7 +249,7 @@ function random_select_bgm() {
 // implement a real loading screen
 
 function set_bgm(music) {
-    bgm.src = "./bgm/" + music;
+    bgm.src = "assets/bgm/" + music;
     var result = /[^/]*$/.exec(bgm.src)[0];
     current_track.innerHTML = result;
     current_track_name = result;
@@ -319,13 +319,13 @@ eInner.style.width = 30 + '%';
 
 function cocaine() {
 
-    document.querySelector("body").style.backgroundImage = "url('horny_eevee.jpg')";
+    document.querySelector("body").style.backgroundImage = "url('assets/horny_eevee.jpg')";
     document.querySelector("body").style.backgroundSize = ""
 
     let array = document.querySelectorAll('button');
     for (i=0;i<array.length;i++) {
         array[i].innerHTML = "POOP";
-        array[i].style.backgroundImage = "url('horny_buttons.jpg')";
+        array[i].style.backgroundImage = "url('assets/horny_buttons.jpg')";
         array[i].style.backgroundPositionX = "center";
         array[i].style.backgroundSize = "cover";
         array[i].onclick = () => open('https://www.youtube.com/watch?v=beeKGfKHlLk');
@@ -340,7 +340,7 @@ function cocaine() {
     (function(){
         document.documentElement.style.transitionDuration="60s"; document.documentElement.style.transitionTimingFunction="ease-in" ; document.documentElement.style.transform="rotate(1080deg)";
     }());
-    set_bgm('dummy.mp3');
+    set_bgm('assets/dummy.mp3');
     play_bgm()
 
     
