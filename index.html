@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stale fish</title>
+    <link rel = "icon" href = 
+    "https://static.vecteezy.com/system/resources/previews/005/653/938/original/simple-fish-logo-free-vector.jpg" 
+        type = "image/x-icon">
+    <link rel="stylesheet" href="stylesheet.css"/>
+
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+</head>
+
+<body>
+<div class="landing_page">
+<div id="init_div">
+ <h1>initializing</h1>
+</div>
+
+    <div class="banner">
+    <br><br><br><br>
+    <div class="banner__content">
+        <div class="banner__text">
+            <p>Stale Fish's Corner. Press enter or click enter to enter</p>
+            <div class="banner__close">
+                <p>start</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="load__screen">
+
+    <svg viewbox='0 0 100 100' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+        <defs>
+            <linearGradient id='gradient1' x1='0' y1='0' x2='0' y2='1'>
+                <stop offset='0%' stop-color='#ef476f' />
+                <stop offset='100%' stop-color='#ffd166' />
+            </linearGradient>
+            <linearGradient id='gradient2' x1='0' y1='0' x2='0' y2='1'>
+                <stop offset='0%' stop-color='#ffd166' />
+                <stop offset='100%' stop-color='#06d6a0' />
+            </linearGradient>
+            <linearGradient id='gradient3' x1='0' y1='0' x2='0' y2='1'>
+                <stop offset='0%' stop-color='#118ab2' />
+                <stop offset='100%' stop-color='#ef476f' />
+            </linearGradient>
+            <mask id='mask1'>
+                <g transform='translate(50, 50)'>
+                    <g>
+                        <animateTransform attributeType='XML' attributeName='transform' type='rotate' dur='8s' repeatCount='indefinite' values='0;90;180;270' calcMode='discrete' />
+                        <g transform='translate(-50,-50)'>
+                            <line x1='20' x2='20' y1='20' y2='20' stroke='#fff' stroke-width='20' stroke-linecap='round'>
+                                <animate attributeName='x1' values='50;20;20;20;20;50;50;50;50' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                                <animate attributeName='x2' values='50;20;80;80;80;80;80;50;50' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                                <animate attributeName='y1' values='50;20;20;20;20;20;20;50;50' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                                <animate attributeName='y2' values='50;20;20;20;20;20;20;50;50' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                                <animate attributeName='stroke-width' values='40;20;15;15;15;15;15;40;40' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                            </line>
+                        </g>
+                    </g>
+                </g>
+            </mask>
+            <mask id='mask2'>
+                <g transform='translate(50, 50)'>
+                    <g>
+                        <animateTransform attributeType='XML' attributeName='transform' type='rotate' dur='8s' repeatCount='indefinite' values='0;90;180;270' calcMode='discrete' />
+                        <g transform='translate(-50,-50)'>
+                            <line x1='50' x2='50' y1='50' y2='50' stroke='#fff' stroke-width='20' stroke-linecap='round'>
+                                <animate attributeName='x1' values='50;50;50;20;80;80;80;50;50' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                                <animate attributeName='x2' values='50;50;50;20;80;80;80;50;50' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                                <animate attributeName='y1' values='50;50;50;80;80;20;20;50;50' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                                <animate attributeName='y2' values='50;50;50;80;80;50;50;50;50' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                                <animate attributeName='stroke-width' values='40;20;20;20;20;15;15;40;40' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                            </line>
+                        </g>
+                    </g>
+                </g>
+            </mask>
+            <mask id='mask3'>
+                <g transform='translate(50, 50)'>
+                    <g>
+                        <animateTransform attributeType='XML' attributeName='transform' type='rotate' dur='8s' repeatCount='indefinite' values='0;90;180;270' calcMode='discrete' />
+                        <g transform='translate(-50,-50)'>
+                            <line x1='80' x2='80' y1='80' y2='80' stroke='#fff' stroke-width='20' stroke-linecap='round'>
+                                <animate attributeName='x1' values='50;80;80;50;20;20;20;50;50' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                                <animate attributeName='x2' values='50;80;80;50;80;80;80;50;50' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                                <animate attributeName='y1' values='50;80;80;50;80;80;80;50;50' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                                <animate attributeName='y2' values='50;80;80;50;20;20;20;50;50' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                                <animate attributeName='stroke-width' values='40;20;20;20;15;15;15;40;40' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                            </line>
+                        </g>
+                    </g>
+                </g>
+            </mask>
+        </defs>
+        <g>
+            <rect x='0' y='0' height='100' width='100' fill='url(#gradient1)' stroke='none' mask='url(#mask1)' />
+            <rect x='0' y='0' height='100' width='100' fill='url(#gradient2)' stroke='none' mask='url(#mask2)' />
+            <rect x='0' y='0' height='100' width='100' fill='url(#gradient3)' stroke='none' mask='url(#mask3)' />
+        </g>
+        <g transform='translate(50, 50)'>
+            <g>
+                <animateTransform attributeType='XML' attributeName='transform' type='rotate' dur='8s' repeatCount='indefinite' values='0;90;180;270' calcMode='discrete' />
+                <g transform='translate(-50,-50)'>
+                    <circle cx='50' cy='50' r='4' fill='#030303'>                         
+                        <animate attributeName='cx' values='50;80;80;50;50;80;80;50;50' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                        <animate attributeName='cy' values='50;80;80;50;50;20;20;50;50' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                    </circle>
+                    <circle cx='50' cy='50' r='4' fill='#030303'>
+                        <animate attributeName='cx' values='50;50;50;20;80;80;80;50;50' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                        <animate attributeName='cy' values='50;50;50;80;80;20;20;50;50' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                    </circle>
+                    <circle cx='50' cy='50' r='4' fill='#030303'>
+                        <animate attributeName='cx' values='50;20;20;20;20;80;80;50;50' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                        <animate attributeName='cy' values='50;20;20;20;20;20;20;50;50' calcMode='spline' keySplines='0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1' dur='2s' repeatCount='indefinite' />
+                    </circle>
+                </g>
+            </g>
+        </g>
+    </svg>
+
+
+
+</div>
+</div>
+
+<div class="content">
+    
+    <!--global stuff-->
+        <img id="home_button" src="assets/home.svg" onclick="main_button()">
+        <div id="randomize_div">
+        <button id="randomize" onpointerenter="play_sound(hover)" onclick="play_bgm(set_bgm(random_select_bgm()))">Randomize</button>
+        </div>
+        <div id="main" class="pages">
+
+            <div id="main_header" onclick="set_main_counter()"> <!-- this is where the title and logo go-->
+                <h1>stale fish</h1>
+            </div>
+            <div id="main_sprite"> <!--this is where your pixel animation will go-->
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bfa23285-62f1-4c8d-810d-b8103d45647a/dcpa5q1-08b99da9-fa26-4fb0-a6a0-38a614c0321d.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JmYTIzMjg1LTYyZjEtNGM4ZC04MTBkLWI4MTAzZDQ1NjQ3YVwvZGNwYTVxMS0wOGI5OWRhOS1mYTI2LTRmYjAtYTZhMC0zOGE2MTRjMDMyMWQuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.uuli25eSpQyFeqqdEBrJ4tmn1fjbr3-VTrW5JovDW-M" height="90vh">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d80318c6-c0eb-4721-ab49-9ca3b1908ced/d2oub88-af87a060-7cc5-4215-9a23-54b3bd04c6e3.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Q4MDMxOGM2LWMwZWItNDcyMS1hYjQ5LTljYTNiMTkwOGNlZFwvZDJvdWI4OC1hZjg3YTA2MC03Y2M1LTQyMTUtOWEyMy01NGIzYmQwNGM2ZTMuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.0NMF_6biR2rCHB7olhIYZXkeh6ET-3dQJeAOnnqE3fQ" height="135vh">
+                    <model-viewer
+                id="astronaut"
+                src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                alt="A 3D model of an astronaut"
+                auto-rotate
+                camera-controls
+                background-color="#455A64"
+                    >
+                    </model-viewer>
+            </div>
+            <br>
+            <div id="main_menu"> <!-- this is where your main menu nav is-->
+               <button onpointerenter="play_sound(hover)" onclick="button_click(open_about())">About</button>
+               <button onpointerenter="play_sound(hover)" onclick="button_click(open_art())">Art</button>
+               <button onpointerenter="play_sound(hover)" onclick="button_click(open_hobbies())">Hobbies</button>
+               <button onpointerenter="play_sound(hover)" onclick="button_click(open_pictures())">Pictures</button>
+               <button onpointerenter="play_sound(hover)" onclick="button_click(open_contact())">Contact</button>
+            </div>
+            
+            <br>
+
+            <br>
+            
+        
+           
+        </div>
+
+            <div id="about" class="pages">
+
+                <div id="about_header"> <!-- this is where the title and logo go-->
+                    <h1>About</h1>
+                    </div>
+                    <div id="about_body">
+                    <p>hello. i'm stale fish. full-time fish. i like french fries.</p>
+                    <img width="200px" src="https://www.recipetineats.com/wp-content/uploads/2022/09/Crispy-Fries_8.jpg">
+                    </div>
+
+
+            </div>
+
+            <div id="art" class="pages">
+                <div id="art_header"> <!-- this is where the title and logo go-->
+                    <h1>i'm hungry for pizza please help</h1>
+                </div>
+                <div id="art_body">
+                    <img src="https://pbs.twimg.com/media/FXLU4S5WIAAO_80.jpg:large" id="serp">
+                </div>
+            </div>
+
+            <div id="hobbies" class="pages">
+                <div id="hobbies_header"> <!-- this is where the title and logo go-->
+                    <h1>Hobbies</h1>
+                    </div>
+
+                <div id="hobbies_body">
+                    <ul>
+                        <li>eating good food</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="pictures" class="pages">
+                <div id="pictures_header"> <!-- this is where the title and logo go-->
+                    <h1>Pictures</h1>
+                </div>
+                <img src="https://i.redd.it/w4mwwagfknm01.jpg"/>
+                
+               
+            </div>
+
+            <div id="contact" class="pages">
+                <div id="contact_header"> <!-- this is where the title and logo go-->
+                    <h1>Contact</h1>
+                    </div>
+                <div id="contact_body">
+               
+                <br>
+                <br>
+                <br>       
+                <h1>discord: <a href="https://discordapp.com/users/894932631026798612" target="_blank" rel="noreferrer noopener">Stale Fish#7545</a></h1>
+                <h1>linkedin: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer noopener" onclick="alert('you\'d think i\'d really dox myself')">click here</a></h1>
+                <button id="contact_leave_button" onpointerenter="play_sound(hover)" onclick="button_click(close_contact())">Leave</button>
+                </div>
+            </div>
+            <footer>
+<div class="sound_control">
+            <div id="volume_control">
+            <div id="main_mute">
+                <img id="main_mute_button" src="assets/sound.svg" onclick="toggle_bgm(bgm)">
+            </div>
+            <div class="volume-slider-con">
+                <div class="volume-slider"></div>
+            </div>
+            <div id="current_track_div">
+                <p>Now playing: <span id="current_track"></span></p>
+            </div>
+</div>
+            </footer>
+</div>
+
+<div class="sounds">
+<audio controls="controls"id="bgm" width="0px" height="0px" loop=1>
+        <source type="audio/mp3" />
+      Your browser does not support the audio tag.
+</audio>
+
+
+<audio controls="controls" id="hover" width="0px" height="0px">
+    <source src="assets/hover.mp3" type="audio/mp3" />
+  Your browser does not support the audio tag.
+</audio>
+
+<audio controls="controls" id="nav" width="0px" height="0px">
+    <source src="assets/playstation4nav.mp3" type="audio/mp3" />
+  Your browser does not support the audio tag.
+</audio>
+
+<audio controls="controls" id="nav2" width="0px" height="0px">
+    <source src="assets/playstation4nav2.mp3" type="audio/mp3" />
+  Your browser does not support the audio tag.
+</audio>
+
+<audio controls="controls" id="nav3" width="0px" height="0px">
+    <source src="assets/playstation4nav3.mp3" type="audio/mp3" />
+  Your browser does not support the audio tag.
+</audio>
+</div>
+
+</body>
+
+<script src="script.js"></script>
+</html>
