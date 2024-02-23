@@ -18,16 +18,21 @@
 </div>
 
     <div class="banner">
-    <br><br><br><br>
-    <div class="banner__content">
-        <div class="banner__text">
-            <p>Stale Fish's Corner. Press enter or click enter to enter</p>
-            <div class="banner__close">
-                <p>start</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="banner__content">
+            <div class="banner__text">
+                <p>Stale Fish's Corner. Press enter or click enter to enter</p>
+                <div class="banner__close">
+                    <p>start</p>
+                </div>
+                
+                <button onclick="bgm.volume = 0; alert('muted')">o yea theres sound so click here to set the volume to 0</button>
             </div>
         </div>
     </div>
-</div>
 
 <div class="load__screen">
 
@@ -128,10 +133,14 @@
 <div class="content">
     
     <!--global stuff-->
+        <div id="home_button">
         <img id="home_button" src="assets/home.svg" onclick="main_button()">
+        </div>
+
         <div id="randomize_div">
         <button id="randomize" onpointerenter="play_sound(hover)" onclick="play_bgm(set_bgm(random_select_bgm()))">Randomize</button>
         </div>
+
         <div id="main" class="pages">
 
             <div id="main_header" onclick="set_main_counter()"> <!-- this is where the title and logo go-->
@@ -155,8 +164,10 @@
                <button onpointerenter="play_sound(hover)" onclick="button_click(open_about())">About</button>
                <button onpointerenter="play_sound(hover)" onclick="button_click(open_art())">Art</button>
                <button onpointerenter="play_sound(hover)" onclick="button_click(open_hobbies())">Hobbies</button>
+               <button onpointerenter="play_sound(hover)" onclick="button_click(randomR34Image())">Random R34 picture</button>
                <button onpointerenter="play_sound(hover)" onclick="button_click(open_pictures())">Pictures</button>
                <button onpointerenter="play_sound(hover)" onclick="button_click(open_contact())">Contact</button>
+               <button class="hiddenButton" onpointerenter="play_sound(hover)" onclick="button_click(postRickrollOpen())">lol you got rickrolled but here's the real shit. nsfw warning.</button>
             </div>
             
             <br>
@@ -166,6 +177,14 @@
         
            
         </div>
+
+        <div id="randomR34Image" class="pages">
+
+            <h1>randomR34Image</h1>
+
+
+        </div>
+
 
             <div id="about" class="pages">
 
@@ -178,6 +197,11 @@
                     </div>
 
 
+            </div>
+            
+
+            <div id="postRickroll" class="pages">
+                <h1>the actual good shit</h1>
             </div>
 
             <div id="art" class="pages">
@@ -223,6 +247,13 @@
                 <h1>linkedin: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer noopener" onclick="alert('you\'d think i\'d really dox myself')">click here</a></h1>
                 <button id="contact_leave_button" onpointerenter="play_sound(hover)" onclick="button_click(close_contact())">Leave</button>
                 </div>
+            </div>
+             <!--rickroll div-->
+            <div class="rickroll">
+                <video class="rickrollVideo" controls>
+                    <source src="assets/rickroll.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
             <footer>
 <div class="sound_control">

@@ -9,7 +9,7 @@ let current_track_name = '';
 let landing_page_exit = 0;
 let play_state = 1;
 
-// getter constants
+// constants
 
 const init = document.querySelector('#init_div');
 const load_screen = document.querySelector(".load__screen");
@@ -17,7 +17,10 @@ const bgm = document.querySelector("#bgm");
 const nav1 = document.querySelector("#nav");
 const hover = document.querySelector("#hover");
 const current_track = document.querySelector("#current_track");
-
+const rickroll = document.querySelector(".rickroll");
+const rickrollVideo = document.querySelector(".rickrollVideo");
+const postRickroll = document.querySelector("#postRickroll");
+const hiddenButton = document.querySelector(".hiddenButton");
 
 document.querySelector(".banner__close").addEventListener('click', function(){
     start_loading();
@@ -70,7 +73,7 @@ if (main_counter == 25) {
 
 
 // initializer
-window.addEventListener('load', function() {
+    window.addEventListener('load', function() {
     console.log("All assets have loaded");
     init.style.display = "none";
     set_bgm(random_select_bgm()); // sets bgm source to random in list
@@ -92,16 +95,12 @@ window.addEventListener('load', function() {
     document.querySelector("#hobbies").style.display = 'none';
     document.querySelector("#pictures").style.display = 'none';
     document.querySelector("#contact").style.display = 'none';
-
+    document.querySelector("#randomR34Image").style.display = 'none';
+    rickroll.style.display = 'none';
+    postRickroll.style.display = 'none';
+    hiddenButton.style.display = 'none';
 
 });
-
-function open_pictures(){  
-    var nav = document.getElementById("nav2");
-    nav.play();
-    document.querySelector("#pictures").style.display = 'block';
-    document.querySelector("#main").style.display = 'none';
-}
 
 window.addEventListener('keypress', function(event){
     if (event.key === "Enter") {
@@ -153,7 +152,7 @@ function open_pictures() {
 function open_contact() {
     reset_page();
     set_bgm('contact.mp3');
-    audio.volume = 0.05;
+    bgm.volume = 0.05;
     play_bgm();
     document.querySelector("#contact").style.display = 'block';
     document.querySelector("body").style.backgroundImage = "url('assets/city.jpg')";
@@ -194,6 +193,11 @@ function reset_page() {
     document.querySelector("#hobbies").style.display = 'none';
     document.querySelector("#pictures").style.display = 'none';
     document.querySelector("#contact").style.display = 'none';
+    document.querySelector("#randomR34Image").style.display = 'none';
+    rickroll.style.display = 'none';
+    rickrollVideo.pause();
+    rickrollVideo.currentTime = 0;
+    bgm.play();
 }
 
 
@@ -266,7 +270,6 @@ function play_bgm() {
 
 var e = document.querySelector('.volume-slider-con');
 var eInner = document.querySelector('.volume-slider');
-var audio = document.querySelector('#bgm');
 var drag = false;
 e.addEventListener('mousedown',function(ev){
    drag = true;
@@ -303,7 +306,7 @@ var updateBar = function (x, vol) {
         eInner.style.width = percentage +'%';
 
         if (play_state == 1) {
-        audio.volume = percentage / 100;
+        bgm.volume = percentage / 100;
     } else {
         initial_volume = percentage / 100;
     }
@@ -332,14 +335,45 @@ function cocaine() {
         array[i].innerHTML = "horny mode activated";
         array[i].style.fontSize = "30px";
     }
-    document.querySelector('#hover').src = './fart.mp3';
+    document.querySelector('#hover').src = 'assets/fart.mp3';
     (function(){
         document.documentElement.style.transitionDuration="60s"; document.documentElement.style.transitionTimingFunction="ease-in" ; document.documentElement.style.transform="rotate(1080deg)";
     }());
-    set_bgm('assets/dummy.mp3');
+    set_bgm('dummy.mp3');
     play_bgm()
 
     
 
     // click button, opens tab, chinese rick rolls them.
+}
+
+
+
+function randomR34Image() {
+        reset_page(); //resets page
+        document.querySelector("#randomR34Image").style.display = 'block'; //displays randomR34Image
+        rickroll.style.display = 'block';
+        bgm.pause();
+        rickrollVideo.play();
+        hiddenButton.style.display = 'block';
+}
+
+function postRickrollOpen() {
+    reset_page(); //resets page
+        document.querySelector("#randomR34Image").style.display = 'block'; //displays randomR34Image
+        document.querySelector("body").style.backgroundSize = ""
+        document.querySelector("body").style.backgroundImage = "url('assets/horny_eevee.jpg')";
+        rickroll.style.display = 'block';
+        bgm.pause();
+        rickrollVideo.play();
+        hiddenButton.style.display = 'hide';
+        array = document.querySelectorAll('h1');
+        for (i=0; i<array.length; i++) {
+            array[i].innerHTML = "horny mode activated";
+            array[i].style.fontSize = "30px";
+        }
+        (function(){
+            document.documentElement.style.transitionDuration="60s"; document.documentElement.style.transitionTimingFunction="ease-in" ; document.documentElement.style.transform="rotate(1080deg)";
+        }());
+
 }
