@@ -327,13 +327,14 @@ function cocaine() {
         array[i].style.backgroundImage = "url('assets/horny_buttons.jpg')";
         array[i].style.backgroundPositionX = "center";
         array[i].style.backgroundSize = "cover";
-        array[i].onclick = () => open('https://www.youtube.com/watch?v=beeKGfKHlLk');
+        array[i].onclick = () => open('https://e621.net/posts/random');
     }
 
     array = document.querySelectorAll('h1');
     for (i=0; i<array.length; i++) {
         array[i].innerHTML = "horny mode activated";
         array[i].style.fontSize = "30px";
+        array[i].onclick = () => open('https://e621.net/posts/random');
     }
     document.querySelector('#hover').src = 'assets/fart.mp3';
     (function(){
@@ -369,11 +370,19 @@ function postRickrollOpen() {
         hiddenButton.style.display = 'none';
         array = document.querySelectorAll('h1');
         for (i=0; i<array.length; i++) {
-            array[i].innerHTML = "horny mode activated";
+            array[i].innerHTML = "18+ nsfw warning. click me at your own risk";
             array[i].style.fontSize = "30px";
+            array[i].onclick = () => open('https://e621.net/posts/random');
         }
         (function(){
             document.documentElement.style.transitionDuration="60s"; document.documentElement.style.transitionTimingFunction="ease-in" ; document.documentElement.style.transform="rotate(1080deg)";
         }());
 
+}
+
+function linkedinRickroll() {
+    reset_page()
+    rickroll.style.display = 'block';
+    bgm.pause();
+    rickrollVideo.play();
 }
