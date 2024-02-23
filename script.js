@@ -366,7 +366,7 @@ function postRickrollOpen() {
         rickroll.style.display = 'block';
         bgm.pause();
         rickrollVideo.play();
-        hiddenButton.style.display = 'hide';
+        hiddenButton.style.display = 'none';
         array = document.querySelectorAll('h1');
         for (i=0; i<array.length; i++) {
             array[i].innerHTML = "horny mode activated";
