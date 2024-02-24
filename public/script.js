@@ -386,3 +386,4 @@ function linkedinRickroll() {
     bgm.pause();
     rickrollVideo.play();
 }
+
